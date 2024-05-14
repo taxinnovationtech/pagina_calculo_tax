@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaxInnovation - Preparar Proposta</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="busca_cnpj.js"></script>
+
+</head>
+<body>
+
+    <header class="cabecalho">
+        <img src="img/logo.png" alt="Logo TaxInnovation" width="100px" height="100px">
+    </header>
+
+    <main>
+        <div class="busca_empresa">
+            <div id="primeira_parte">
+                <div id="menu_busca">
+                    <input id="input_cnpj" class="inputs" type="text" value="">
+                    <button id="pesquisar" onclick="busca_cnpj()">
+                        <img src="img/search.svg" alt="Logo TaxInnovation" width="15px" height="15px">
+                    </button>
+                </div> 
+                <div id="div_btn_limpar">
+                    <button id="btn_limpar" onclick="limpa()">Limpar</button>
+                </div>
+            </div>
+            <div id="segunda_parte">
+                <ul class="infos_gerais">
+
+                    <li class="infos_gerais__itens">
+                        <h6 class="titulo_itens">NOME:</h6>
+                        <p id="razao_social" class="conteudo_gerais"></p>
+                    </li>
+                    <li class="infos_gerais__itens">
+                        <h6 class="titulo_itens">CNPJ:</h6>
+                        <p id="cnpj" class="conteudo_gerais"></p>
+                    </li>
+                    <li class="infos_gerais__itens">
+                        <h6 class="titulo_itens">COMERCIAL:</h6>
+                        <p id="comercial" class="conteudo_gerais"></p>
+                    </li>
+                    <li class="infos_gerais__itens">
+                        <h6 class="titulo_itens">CNAE PRINCIPAL:</h6>
+                        <p id="cnae_principal" class="conteudo_gerais"></p>
+                    </li>
+                    <li class="infos_gerais__itens">
+                        <h6 class="titulo_itens">SEGMENTO:</h6>
+                        <p id="segmento" class="conteudo_gerais"></p>
+                    </li>
+                </ul>
+            </div>
+            <div id="terceira_parte">
+                <div id="infos_financeiras">
+                    <ul class="infos_gerais">
+                        <li class="infos_financeiras__itens">
+                            <h6 class="titulo_itens">FATURAMENTO ANUAL:</h6>
+                            <input id="faturamento_anual" class="inputs" type="text">
+                        </li>
+                        <li class="infos_financeiras__itens">
+                            <h6 class="titulo_itens">QTD DE FUNCIONÁRIOS:</h6>
+                            <input id="qtd_funcionarios" class="inputs" type="text">
+                        </li>
+                        <li class="infos_financeiras__itens">
+                            <h6 class="titulo_itens">FOLHA SALARIAL:</h6>
+                            <input id="folha_salarial" class="inputs" type="text">
+                        </li>
+                    </ul>
+                </div> 
+                <div>
+                    <button id="btn_calcular">CALCULAR</button>
+                </div>
+            </div>
+        </div>
+
+        
+
+        <div class="conteudo_principal">
+
+            <div id="container_teses-aplicaveis">
+                
+                <div class="titulos">
+                    <h2 class="titulos__h2">TESES AJUIZADAS</h2>
+                    <button class="enviar_para_selecionadas">
+                        <img src="img/balance.png" alt="Teses Ajuizadas" width="20px" height="20px">
+                    </button>
+                </div>
+                
+                <div class="subtitulos">    
+                    <h3 class="subtitulos__h3">ID</h2>
+                    <h3 class="subtitulos__h3">TESE</h2>
+                    <h3 class="subtitulos__h3">PED. INICIAL</h2>
+                </div>
+
+                <div class="teses">
+                   <ul id="teses_ajuizadas">
+
+                <!--   <li class="teses__item">
+                        <button class="salvar_teses_ajuizadas">
+                            <img src="img/salvar.png" alt="Salvar" width="20px" height="20px">
+                        </button>
+                        <input value="1" class="input_teses">
+                        <p class="itens__descricao"><abbr title="Diferença matemática 6% ou 14% da ST em operações interestaduais.">Diferença matemática 6% ou 14% da ST em operações interestaduais.</abbr></p>
+                        <p class="itens__descricao">CONCEDIDA A SEGURANÇA para fins de reconhecer o direito líquido e certo das Impetrantes em não serem ilegal e inconstitucionalmente exigidas do recolhimento da taxa de fiscalização de localização, de instalação e de funcionamento no exercício de 2013, pelas razões de direito supra articuladas, devendo ser anulado o lançamento tributário em afronta ao ordenamento jurídico.</p>
+                    </li>
+                    <li class="teses__item">
+                        <button class="salvar_teses_ajuizadas">
+                            <img src="img/salvar.png" alt="Salvar" width="20px" height="20px">
+                        </button>
+                        <input value="null" class="input_nao_teses">
+                        <p class="itens__descricao_nao_tese"><abbr title="Diferença matemática 6% ou 14% da ST em operações interestaduais.">Não é tese</abbr></p>
+                        <p class="itens__descricao">CONCEDIDA A SEGURANÇA para fins de reconhecer o direito líquido e certo das Impetrantes em não serem ilegal e inconstitucionalmente exigidas do recolhimento da taxa de fiscalização de localização, de instalação e de funcionamento no exercício de 2013, pelas razões de direito supra articuladas, devendo ser anulado o lançamento tributário em afronta ao ordenamento jurídico.</p>
+                    </li>
+                    <li class="teses__item">
+                        <button class="salvar_teses_ajuizadas">
+                            <img src="img/salvar.png" alt="Salvar" width="20px" height="20px">
+                        </button>
+                        <input value="1" class="input_teses">
+                        <p class="itens__descricao"><abbr title="Diferença matemática 6% ou 14% da ST em operações interestaduais.">Diferença matemática 6% ou 14% da ST em operações interestaduais.</abbr></p>
+                        <p class="itens__descricao">CONCEDIDA A SEGURANÇA para fins de reconhecer o direito líquido e certo das Impetrantes em não serem ilegal e inconstitucionalmente exigidas do recolhimento da taxa de fiscalização de localização, de instalação e de funcionamento no exercício de 2013, pelas razões de direito supra articuladas, devendo ser anulado o lançamento tributário em afronta ao ordenamento jurídico.</p>
+                    </li>-->
+
+                    </ul>
+                </div>
+
+            </div>
+
+
+            <div id="container_teses-aplicaveis">
+                
+                <div class="titulos">
+                    <h2 class="titulos__h2">TESES APLICÁVEIS</h2>
+                    <button class="enviar_para_selecionadas">
+                        <img src="img/next.png" alt="Passar para Selecionadas" width="20px" height="20px" onclick="transfere_para_selecionadas()">
+                    </button>
+                </div>
+                
+                <div class="subtitulos">    
+                    <h3 class="subtitulos__h3">ID</h2>
+                    <h3 class="subtitulos__h3">TESE</h2>
+                    <h3 class="subtitulos__h3">PCT%</h2>
+                </div>
+
+                <div class="teses">
+                   <ul id="teses_aplicaveis">
+
+                      <!--  <li class="teses__item">
+                            <p class="itens__id">1</p>
+                            <p class="itens__descricao"><abbr title="Diferença matemática 6% ou 14% da ST em operações interestaduais.">Diferença matemática 6% ou 14% da ST em operações interestaduais.</abbr></p>
+                            <p class="itens__percentual">0,24%</p>
+                        </li>
+
+                        <li class="teses__item">
+                            <p class="itens__id">4</p>
+                            <p class="itens__descricao"><abbr title="SAT/FAP/RAT - Fator Acidental Previdenciário, recálculo e reenquadramento">SAT/FAP/RAT - Fator Acidental Previdenciário, recálculo e reenquadramento</abbr></p>
+                            <p class="itens__percentual">0,10%</p>
+                        </li>
+
+                        <li class="teses__item">
+                            <p class="itens__id">5</p>
+                            <p class="itens__descricao"><abbr title="Baixa da ST pelas vendas ou estoque">Baixa da ST pelas vendas ou estoque</abbr></p>
+                            <p class="itens__percentual">0,24%</p>
+                        </li>
+
+                        <li class="teses__item">
+                            <p class="itens__id">6</p>
+                            <p class="itens__descricao"><abbr title="Taxas de fiscalização e licença">Taxas de fiscalização e licença</abbr></p>
+                            <p class="itens__percentual">0,02%</p>
+                        </li>
+
+                        <li class="teses__item">
+                            <p class="itens__id">7</p>
+                            <p class="itens__descricao"><abbr title="CIAP – crédito extemporâneo">CIAP – crédito extemporâneo</abbr></p>
+                            <p class="itens__percentual">0,01%</p>
+                        </li>-->
+                    </ul>
+                </div>
+
+            </div>
+            <div id="container_teses-selecionada">
+                
+                <div class="titulos">
+                    <button class="enviar_para_selecionadas" onclick="return_selecionaveis()">
+                        <img src="img/return.png" alt="Passar para Selecionadas" width="20px" height="20px">
+                    </button>
+                    <h2 class="titulos__h2">TESES SELECIONADAS</h2>
+                    <button class="enviar_para_selecionadas" onclick="transfere_para_finais()">
+                        <img src="img/next.png" alt="Passar para Selecionadas" width="20px" height="20px">
+                    </button>
+                </div>
+
+                <div class="subtitulos">
+                    <h3 class="subtitulos__h3">ID</h2>
+                    <h3 class="subtitulos__h3">TESE</h2>
+                    <h3 class="subtitulos__h3">PCT%</h2>
+                </div>
+
+                <div class="teses">
+                    <ul id="teses_selecionadas_analise">
+                       <!-- <li class="teses__item">
+                            <p class="itens__id">2</p>
+                            <p class="itens__descricao" onclick="exibeTextoCompleto('Ressarcimentos  do ICMS e Substituição Tributária')"><abbr title="Ressarcimentos do ICMS e Substituição Tributária">Ressarcimentos  do ICMS e Substituição Tributária</abbr></p>
+                            <p class="itens__percentual" onclick="exibeTextoCompleto('2,36%')">2,36%</p>
+                        </li>-->
+
+
+                    </ul>
+                </div>
+
+            </div>
+
+            <div id="container_teses-finais">
+
+                <div class="titulos">
+                    <button class="enviar_para_selecionadas" onclick="return_aplicaveis()">
+                        <img src="img/return.png" alt="Salvar Teses Selecionadas" width="20px" height="20px">
+                    </button>
+                    
+                    <h2 class="titulos__h2">TESES FINAIS</h2>
+                    <button class="enviar_para_selecionadas" id="btn_salvar_proposta" onclick="grava_proposta()">
+                        <img src="img/salvar.png" alt="Salvar Teses Selecionadas" width="20px" height="20px">
+                    </button>
+                </div>
+
+                <div class="subtitulos">
+                    <h3 class="subtitulos__h3">ID</h2>
+                    <h3 class="subtitulos__h3">TESE</h2>
+                    <h3 class="subtitulos__h3">PCT%</h2>
+                </div>
+
+                <div class="teses">
+                    <ul id="teses_finais">
+                       <!-- <li class="teses__item">
+                            <p class="itens__id">3</p>
+                            <p class="itens__descricao"><abbr title="Exclusão ICMS da base de cálculo do PIS e da COFINS importação">Exclusão ICMS da base de cálculo do PIS e da COFINS importação</abbr></p>
+                            <p class="itens__percentual">0,24%</p></li>-->
+                        
+                    </ul>
+    
+                </div>
+            </div>
+        </div>
+    
+        <dialog id="registrando_proposta">
+            <h2>REGISTRANDO PROPOSTA...</h2>
+        </dialog>
+
+        <dialog id="registrando_alteracao">
+            <h2>REGISTRANDO ALTERACAO...</h2>
+        </dialog>
+
+        <dialog id="proposta_gravada">
+            <h2>Proposta Gravada com sucesso!!!</h2>
+            <button id="ok" onclick="fechaAlerta()">ok</button>
+        </dialog>
+
+        <dialog id="alteracao_gravada">
+            <h2>Alteração Gravada com sucesso!!!</h2>
+            <button id="ok_alteracao" onclick="fechaAlteracao()">ok</button>
+        </dialog>
+
+        <dialog id="proposta_encontrada">
+            <h2>Essa empresa já possui uma proposta registrada, deseja reutilizar ou fazer uma nova?</h2>
+            <div id="container_botoes">
+                <button id="btn_reutilizar">Reutilizar</button>
+                <button id="btn_fazer_nova">Fazer Nova</button>
+            </div>
+        </dialog>
+
+        <dialog id="sem_teses_aplicaveis">
+            <h2>Esse segmento não possui teses aplicaveis, insira no banco de dados para prosseguir com a proposta.</h2>
+            <div id="container_botoes">
+                <button id="btn_ok_sem_aplicaveis" onclick="fechaOkSemTese()">Ok</button>
+            </div>
+        </dialog>
+    </main>
+    
+</body>
+</html>

@@ -1,0 +1,420 @@
+body {
+    background-color: #D9D9D9;
+}
+
+main {
+    height: 100%;
+}
+.cabecalho{
+    text-align: center;
+}
+
+.busca_empresa{
+    display: flex;
+    justify-content: space-between;
+    background-color: #ffffff;
+    padding: 10px;
+}
+
+#primeira_parte{
+    display: flex;
+    flex-direction: column;
+}
+
+#menu_busca{
+    margin: 10px 0 83% 10px;
+    display: flex;
+}
+
+#div_btn_limpar{
+    margin: 0 0 0 10px;
+}
+
+#btn_limpar {
+    padding: 7px;
+    width: 150px;
+    border-radius: 10px;
+    background-color: #42466D;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.inputs {
+    padding: 5px;
+    border-radius: 10px;
+    width: 135px;
+}
+
+#pesquisar {
+    background-color: transparent;
+    border: none;
+    align-items: center;
+}
+
+.infos_gerais {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0 10px 0;
+}
+
+.infos_gerais__itens{
+    display: flex;
+    margin: 12px;
+}
+
+.titulo_itens{
+    color: #42466D;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    margin: 0 5px 2px 0;
+}
+
+#terceira_parte{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#infos_financeiras{
+    margin: 10px 0 5% 10px;
+    display: flex;
+}
+
+.infos_financeiras__itens{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    align-items: center;
+}
+
+#btn_calcular {
+    padding: 7px;
+    width: 150px;
+    border-radius: 10px;
+    background-color: #42466D;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.conteudo_gerais{
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    color: #42466D;
+}
+
+#btn_calcular:hover, #btn_limpar:hover{
+    box-shadow: 5px 5px 5px black;
+}
+
+#pesquisar:hover{
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px black;
+}
+
+.conteudo_principal {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+}
+
+#container_teses-aplicaveis {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: 33%;
+    background-color: #42466D;
+    margin: 5px;
+    height: 100%;
+}
+
+#container_teses-selecionada {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: 33%;
+    background-color: #42466D;
+    margin: 5px;
+    height: 100%;
+}
+
+#container_teses-finais {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: 33%;
+    background-color: #42466D;
+    margin: 5px;
+    height: 100%;
+}
+
+.titulos{
+    background-color: #D9D9D9;
+    width: 100%;
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    color: #42466D;
+    padding: 10px;
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.subtitulos{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 10px;
+}
+
+.subtitulos__h3 {
+    width: 100%;
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    color: white;
+}
+
+.teses{
+    background-color: #D9D9D9;
+    width: 100%;
+}
+
+.teses__item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.itens__id{
+    text-align: center;
+    margin: 2px 35px 2px 50px;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 1vw;
+}
+
+.itens__descricao{
+    max-width: 15ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin: 2px 20px 2px 10px;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 1vw;
+    cursor: pointer;
+    text-align: left;
+}
+
+.itens__descricao_nao_tese{
+    max-width: 15ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin: 2px 20px 2px 10px;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 1vw;
+    cursor: pointer;
+    padding: 0 55px 0 0px;
+}
+
+
+.itens__percentual {
+    max-width: 4ch;
+    margin: 2px 55px 2px 10px;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 1vw;
+}
+
+abbr{
+    text-decoration: none;
+    cursor:pointer;
+}
+
+.input_teses {
+    width: 2vw;
+    margin: 2px 35px 2px 10px;
+}
+
+.input_nao_teses{
+    width: 2vw;
+    margin: 2px 60px 2px 10px;
+}
+
+.salvar_teses_ajuizadas {
+    background-color: transparent;
+    border: none;
+    align-items: center;
+    cursor: pointer;
+}
+
+.enviar_para_selecionadas{
+    background-color: transparent;
+    border: none;
+    align-items: center;
+    cursor: pointer;
+}
+
+#registrando_proposta{
+    border-radius: 5px;
+    background-color: #42466D;
+}
+
+#registrando_proposta h2{
+    color: white;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 1.5vw;
+}
+
+#proposta_gravada {
+    border-radius: 5px;
+    background-color: #42466D;
+}
+
+#proposta_gravada h2{
+    color: white;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 1.5vw;
+    padding: 2px;
+    margin: 5px;
+}
+#ok{
+    color: #42466D;
+    background-color: #D9D9D9;
+    width: 100%;
+    height: 50px;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 1.5vw;
+    padding: 2px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+#ok:hover{
+    color: white;
+    background-color: #42466D;
+}
+
+#container_botoes {
+    display: flex;
+}
+
+#proposta_encontrada {
+    border-radius: 5px;
+    background-color: #42466D;
+}
+
+#proposta_encontrada h2{
+    color: white;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 1.5vw;
+    padding: 2px;
+    margin: 5px;
+}
+
+#proposta_encontrada button{
+    color: #42466D;
+    background-color: #D9D9D9;
+    width: 50%;
+    height: 50px;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 1.5vw;
+    padding: 2px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+#proposta_encontrada button:hover{
+    color: white;
+    background-color: #42466D;
+}
+
+#alteracao_gravada {
+    border-radius: 5px;
+    background-color: #42466D;
+}
+
+#alteracao_gravada h2{
+    color: white;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 1.5vw;
+    padding: 2px;
+    margin: 5px;
+}
+
+#registrando_alteracao{
+    border-radius: 5px;
+    background-color: #42466D;
+}
+
+#sem_teses_aplicaveis{
+    border-radius: 5px;
+    background-color: #42466D;
+}
+
+#sem_teses_aplicaveis h2{
+    color: white;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 1.5vw;
+}
+
+#btn_ok_sem_aplicaveis{
+    color: #42466D;
+    background-color: #D9D9D9;
+    width: 100%;
+    height: 50px;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 1.5vw;
+    padding: 2px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+#btn_ok_sem_aplicaveis:hover{
+    color: white;
+    background-color: #42466D;
+}
+
+#registrando_alteracao h2{
+    color: white;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 1.5vw;
+}
+
+#ok_alteracao{
+    color: #42466D;
+    background-color: #D9D9D9;
+    width: 100%;
+    height: 50px;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 1.5vw;
+    padding: 2px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+#ok_alteracao:hover{
+    color: white;
+    background-color: #42466D;
+}
